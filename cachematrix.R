@@ -33,7 +33,7 @@ makeCacheMatrix <- function(m = matrix()) {
 
 ## This function takes an instance of the datastructure provided by `makeCacheMatrix`
 ## (parameter 'x'). If the cache is not empty, the cached results are returned. Otherwise 
-## it performs the matrix inversions, caches the result and then returns it.
+## it performs the matrix inversions, caches the result, and then returns it.
 
 cacheSolve <- function(x) {
   i <- x$getinverse()
