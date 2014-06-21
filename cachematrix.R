@@ -1,13 +1,13 @@
-## These functions provide a caching matrix-inverting algorithm.
+## These functions provide a caching, matrix-inverting algorithm.
 ## There is a function for producing a specialised caching datastructure,
 ## and a function for inverting the matrix and caching the result, if required, or 
 ## retriving the cached result, if present.
 ##
-## This assumes that the matrix passed in invertible.
+## This assumes that the matrix in question is invertible.
 
 ## This function takes a matrix (parameter 'm') and returns a data structure
-## that contains the input matrix and will cache the result of the inverted matrix 
-## (see the `makeCacheMatrix` function below). If no matrix is provided, an empty 
+## that contains the input matrix and will cache the result of the inverted matrix operation
+## when using the `makeCacheMatrix` function below. If no matrix is provided, an empty 
 ## matrix is set by default.
 ##
 ## The format of the datastructure is a list with the following function fields:
@@ -33,7 +33,7 @@ makeCacheMatrix <- function(m = matrix()) {
 
 ## This function takes an instance of the datastructure provided by `makeCacheMatrix`
 ## (parameter 'x'). If the cache is not empty, the cached results are returned. Otherwise 
-## it performs the matrix inversions, caches the result and then returns it.
+## it performs the matrix inversion, caches the result and then returns it.
 
 cacheSolve <- function(x) {
   i <- x$getinverse()
